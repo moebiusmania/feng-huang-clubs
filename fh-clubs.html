@@ -1,0 +1,125 @@
+<!-- Imports polymer -->
+<link rel="import" href="./bower_components/polymer/polymer.html">
+<link rel="import" href="./bower_components/google-map/google-map.html">
+<link rel="import" href="./bower_components/paper-input/paper-input.html">
+<link rel="import" href="./bower_components/paper-card/paper-card.html">
+<link rel="import" href="./bower_components/paper-button/paper-button.html">
+<link rel="import" href="./bower_components/iron-image/iron-image.html">
+
+
+<!-- Defines element markup -->
+<dom-module id="feng-huang-clubs">
+    <style>
+      google-map{
+        height: 400px;
+      }
+      paper-card .header{
+        background-color: #2C2D30;
+        /*background-image: url("http://www.fenghuang.org/templates/fenghuang/images/sheet.png");*/
+      }
+      paper-card h3{
+        margin-top: 0;
+      }
+    </style>
+    <template>
+      <google-map api-key="[[key]]" latitude="[[latitude]]" longitude="[[longitude]]"
+      fit-to-markers>
+        <!-- <google-map-marker latitude="45.35068" longitude="9.20059"
+        title="test"></google-map-marker> -->
+        <template is="dom-repeat" items="[[list]]">
+          <google-map-marker latitude="[[item.latitude]]" longitude="[[item.longitude]]"
+          title="[[item.name]]">
+            <img style="display: block;" src="[[item.logo]]" alt="[[item.name]]"
+            width="200" height="200px">
+            <paper-button style="display: block;">
+              <strong>[[item.name]]</strong><br> [[item.city]]
+            </paper-button>
+          </google-map-marker>
+        </template>
+      </google-map>
+
+      <paper-input label="Cerca un club (per nome o paese)" on-keyup="_filterClubs"></paper-input>
+
+      <template is="dom-repeat" items="[[list]]">
+        <paper-card image="[[item.logo]]">
+          <div class="card-content">
+            <h3>[[item.name]]</h3>
+            <p>[[item.city]]</p>
+          </div>
+          <div class="card-actions">
+            <paper-button>Pagina del sito</paper-button>
+          </div>
+        </paper-card>
+      </template>
+
+    </template>
+
+    <!-- Registers custom element -->
+    <script>
+    Polymer({
+        is: 'feng-huang-clubs',
+        properties: {
+          key: {
+            type: String,
+            value: "AIzaSyD6Ltm32QJIxRFDSdWyQ6--2Y_j0YxEwlg"
+          },
+          latitude: {
+            type: String,
+            value: 45.4737012
+          },
+          longitude: {
+            type: String,
+            value: 9.1908025
+          },
+          list: {
+            type: Array,
+            value: []
+          },
+          clubs: {
+            type: Array,
+            value: [
+              {
+                name: "Tang Lang",
+                city: "Pieve Emanuele (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/Tang-Lan-Chuan.png",
+                latitude: 45.35068,
+                longitude: 9.20059,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
+              },
+              {
+                name: "Yĩng Bũ Zhàng Chì",
+                city: "Lacchiarella (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/Yuin-Bu-Zhang-Chi.png",
+                latitude: 45.323792,
+                longitude: 9.140073,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
+              },
+              {
+                name: "Mat Troi Dang Len",
+                city: "Milano (Famagosta)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/Mat-Troi-Dan-Len.png",
+                latitude: 45.432146,
+                longitude: 9.157363,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/corso-milano-famagosta"
+              }
+            ]
+          }
+        },
+
+        // Fires when the element was inserted into the document
+        attached: function() {
+          this.list = this.clubs;
+        },
+
+        _filterClubs(evt){
+          var str = evt.target.value;
+          console.log(str);
+          str.length == 0 ? this.list = this.clubs : this.list = this.clubs.filter(function(club){
+            return (club.name.toLowerCase().search(str) > -1) ||
+              (club.city.toLowerCase().search(str) > -1);
+          });
+        }
+
+    });
+    </script>
+</dom-module>
