@@ -10,6 +10,9 @@
 <!-- Defines element markup -->
 <dom-module id="feng-huang-clubs">
     <style>
+      :host{
+        --paper-input-container-focus-color: #FD2626
+      }
       google-map{
         height: 400px;
       }
@@ -17,16 +20,24 @@
         background-color: #2C2D30;
         /*background-image: url("http://www.fenghuang.org/templates/fenghuang/images/sheet.png");*/
       }
+      paper-card{
+        margin: 10px 0;
+      }
       paper-card h3{
         margin-top: 0;
       }
     </style>
     <template>
+
+      <paper-input label="Cerca un club (per nome o paese)" on-keyup="_filterClubs"
+        value="{{serach::keyup}}"
+      ></paper-input>
+
       <google-map api-key="[[key]]" latitude="[[latitude]]" longitude="[[longitude]]"
       fit-to-markers>
         <template is="dom-repeat" items="[[list]]">
           <google-map-marker latitude="[[item.latitude]]" longitude="[[item.longitude]]"
-          title="[[item.name]]">
+          title="[[item.name]]" animation="DROP">
             <img style="display: block;" src="[[item.logo]]" alt="[[item.name]]"
             width="200" height="200px">
             <paper-button style="display: block;">
@@ -35,8 +46,6 @@
           </google-map-marker>
         </template>
       </google-map>
-
-      <paper-input label="Cerca un club (per nome o paese)" on-keyup="_filterClubs"></paper-input>
 
       <template is="dom-repeat" items="[[list]]">
         <paper-card image="[[item.logo]]">
@@ -69,6 +78,10 @@
             type: String,
             value: 9.1908025
           },
+          search: {
+            type: String,
+            notify: true
+          },
           list: {
             type: Array,
             value: []
@@ -83,30 +96,48 @@
                 latitude: 45.35068,
                 longitude: 9.20059,
                 url: "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
-              },
-              {
+              },{
                 name: "Yĩng Bũ Zhàng Chì",
                 city: "Lacchiarella (Milano)" ,
                 logo: "http://www.fenghuang.org/images/loghi-club/Yuin-Bu-Zhang-Chi.png",
                 latitude: 45.323792,
                 longitude: 9.140073,
                 url: "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
-              },
-              {
+              },{
                 name: "Mat Troi Dang Len",
                 city: "Milano (Famagosta)" ,
                 logo: "http://www.fenghuang.org/images/loghi-club/Mat-Troi-Dan-Len.png",
                 latitude: 45.432146,
                 longitude: 9.157363,
                 url: "http://www.fenghuang.org/kung-fu-milano-pavia/corso-milano-famagosta"
-              },
-              {
+              },{
                 name: "Long Ho",
                 city: "Landriano (Pavia)" ,
                 logo: "http://www.fenghuang.org/images/loghi-club/Long-Ho.png",
                 latitude: 45.312194,
                 longitude: 9.259746,
                 url: "http://www.fenghuang.org/kung-fu-milano-pavia/kung-fu-landriano-pavia"
+              },{
+                name: "Da Cam Thach",
+                city: "Pero (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/Da-Cam-Thach.png",
+                latitude: 45.509823,
+                longitude: 9.089452,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-pero"
+              },{
+                name: "Pa Chi Chuan",
+                city: "Zenone Al Lambro (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/logo-club-placeholder.png",
+                latitude: 45.326934,
+                longitude: 9.357902,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-zenone-al-lambro"
+              },{
+                name: "Nghich ma cuoc",
+                city: "Torrevecchia Pia (Pavia)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/logo-Nghich-ma-cuoc.png",
+                latitude: 45.283727,
+                longitude: 9.298005,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-torrevecchia-pia"
               }
             ]
           }
