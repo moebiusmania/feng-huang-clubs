@@ -16,15 +16,20 @@
       google-map{
         height: 400px;
       }
-      paper-card .header{
-        background-color: #2C2D30;
-        /*background-image: url("http://www.fenghuang.org/templates/fenghuang/images/sheet.png");*/
-      }
+
       paper-card{
         margin: 10px 0;
+        --paper-card: {
+          width: 240px;
+        }
+        --paper-card-header: {
+          background-color: #2C2D30;
+          background-image: url("http://www.fenghuang.org/templates/fenghuang/images/sheet.png");
+        }
       }
       paper-card h3{
         margin-top: 0;
+        color: #FD2626;
       }
     </style>
     <template>
@@ -34,15 +39,16 @@
       ></paper-input>
 
       <google-map api-key="[[key]]" latitude="[[latitude]]" longitude="[[longitude]]"
-      fit-to-markers>
+      fit-to-markers zoom="15">
         <template is="dom-repeat" items="[[list]]">
           <google-map-marker latitude="[[item.latitude]]" longitude="[[item.longitude]]"
-          title="[[item.name]]" animation="DROP">
+          title="[[item.name]]" animation="DROP" on-google-map-marker-click="_test">
             <img style="display: block;" src="[[item.logo]]" alt="[[item.name]]"
             width="200" height="200px">
-            <paper-button style="display: block;">
-              <strong>[[item.name]]</strong><br> [[item.city]]
-            </paper-button>
+            <!-- <paper-button style="display: block;" data-index$="[[index]]"> -->
+              <strong><a href="[[item.url]]" style="color: #FD2626" target="_blank">[[item.name]]</a></strong><br>
+              <small>[[item.city]]</small>
+            <!-- </paper-button> -->
           </google-map-marker>
         </template>
       </google-map>
@@ -54,7 +60,7 @@
             <p>[[item.city]]</p>
           </div>
           <div class="card-actions">
-            <paper-button>Pagina del sito</paper-button>
+            <paper-button data-index$="[[index]]" on-click="_goToUrl">Pagina del sito</paper-button>
           </div>
         </paper-card>
       </template>
@@ -102,7 +108,7 @@
                 logo: "http://www.fenghuang.org/images/loghi-club/Yuin-Bu-Zhang-Chi.png",
                 latitude: 45.323792,
                 longitude: 9.140073,
-                url: "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-lacchiarella-milano"
               },{
                 name: "Mat Troi Dang Len",
                 city: "Milano (Famagosta)" ,
@@ -146,6 +152,11 @@
         // Fires when the element was inserted into the document
         attached: function() {
           this.list = this.clubs;
+        },
+
+        _goToUrl: function(evt){
+          var i = parseInt(evt.currentTarget.dataset.index);
+          window.location.href = this.list[i].url;
         },
 
         _filterClubs(evt){
