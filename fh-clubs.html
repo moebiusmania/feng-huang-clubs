@@ -9,12 +9,16 @@
 
 <!-- Defines element markup -->
 <dom-module id="feng-huang-clubs">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <style>
+      paper-card{
+        font-family: 'Raleway', sans-serif;
+      }
       :host{
         --paper-input-container-focus-color: #FD2626
       }
       google-map{
-        height: 400px;
+        height: 450px;
       }
 
       paper-card{
@@ -34,21 +38,21 @@
     </style>
     <template>
 
-      <paper-input label="Cerca un club (per nome o paese)" on-keyup="_filterClubs"
+      <paper-input label="[[_computeText(clubs)]]" on-keyup="_filterClubs"
         value="{{serach::keyup}}"
       ></paper-input>
 
       <google-map api-key="[[key]]" latitude="[[latitude]]" longitude="[[longitude]]"
-      fit-to-markers zoom="15">
+      fit-to-markers disable-zoom max-zoom="15" min-zoom="10" single-info-window>
         <template is="dom-repeat" items="[[list]]">
           <google-map-marker latitude="[[item.latitude]]" longitude="[[item.longitude]]"
-          title="[[item.name]]" animation="DROP" on-google-map-marker-click="_test">
-            <img style="display: block;" src="[[item.logo]]" alt="[[item.name]]"
+          title="[[item.name]]" animation="DROP" on-google-map-marker-click="_test"
+          click-events data-index$="[[index]]"
+          ></google-map-marker>
+            <!-- <img style="display: block;" src="[[item.logo]]" alt="[[item.name]]"
             width="200" height="200px">
-            <!-- <paper-button style="display: block;" data-index$="[[index]]"> -->
               <strong><a href="[[item.url]]" style="color: #FD2626" target="_blank">[[item.name]]</a></strong><br>
-              <small>[[item.city]]</small>
-            <!-- </paper-button> -->
+              <small>[[item.city]]</small> -->
           </google-map-marker>
         </template>
       </google-map>
@@ -144,6 +148,27 @@
                 latitude: 45.283727,
                 longitude: 9.298005,
                 url: "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-torrevecchia-pia"
+              },{
+                name: "Yun Chi",
+                city: "Rozzano (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/logo-Yun-Chi-Rozzano.png",
+                latitude: 45.378776,
+                longitude: 9.154653,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/corso-rozzano"
+              },{
+                name: "Ho Trao",
+                city: "San Giuliano Milanese (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/Ho-Trao.png",
+                latitude: 45.395334,
+                longitude: 9.288501,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-san-giuliano-milanese"
+              },{
+                name: "Shoen",
+                city: "Senago (Milano)" ,
+                logo: "http://www.fenghuang.org/images/loghi-club/Shoen.png",
+                latitude: 45.574262,
+                longitude: 9.118499,
+                url: "http://www.fenghuang.org/kung-fu-milano-pavia/corso-senago"
               }
             ]
           }
@@ -152,6 +177,14 @@
         // Fires when the element was inserted into the document
         attached: function() {
           this.list = this.clubs;
+        },
+
+        _test(evt){
+          console.log('ok');
+        },
+
+        _computeText(clubs){
+          return 'Cerca tra i ' + clubs.length + ' club della scuola Feng Huang (per nome o paese)'
         },
 
         _goToUrl: function(evt){
