@@ -1,0 +1,24 @@
+{
+  "name": "feng-huang-clubs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://moebiusmania@github.com/moebiusmania/feng-huang-clubs.git"
+  },
+  "author": "Salvatore Laisa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moebiusmania/feng-huang-clubs/issues"
+  },
+  "homepage": "https://github.com/moebiusmania/feng-huang-clubs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}

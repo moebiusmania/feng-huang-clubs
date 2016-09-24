@@ -1,0 +1,23 @@
+{
+  "name": "feng-huang-clubs",
+  "homepage": "https://github.com/moebiusmania/feng-huang-clubs",
+  "authors": [
+    "Salvatore Laisa <moebiusmania@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.6.1",
+    "clab-ui-components": "^1.0.3",
+    "google-map": "GoogleWebComponents/google-map#^1.1.11"
+  }
+}
