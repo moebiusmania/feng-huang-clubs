@@ -1,46 +1,61 @@
 <!-- Imports polymer -->
 <link rel="import" href="./bower_components/polymer/polymer.html">
 <link rel="import" href="./bower_components/google-map/google-map.html">
-<link rel="import" href="./bower_components/paper-input/paper-input.html">
-<link rel="import" href="./bower_components/paper-card/paper-card.html">
-<link rel="import" href="./bower_components/paper-button/paper-button.html">
-<link rel="import" href="./bower_components/iron-image/iron-image.html">
+<link rel="import" href="./bower_components/clab-ui-components/input/view.html">
+<link rel="import" href="./bower_components/clab-ui-components/card/view.html">
 
+<link rel="stylesheet" href="./bower_components/clab-ui-components/_assets/css/contactlab-pattern.css">
 
 <!-- Defines element markup -->
 <dom-module id="feng-huang-clubs">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <style>
-      paper-card{
-        font-family: 'Raleway', sans-serif;
-      }
-      :host{
-        --paper-input-container-focus-color: #FD2626
-      }
-      google-map{
-        height: 450px;
+
+      .contain{
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
       }
 
-      paper-card{
-        margin: 10px 0;
-        --paper-card: {
-          width: 240px;
-        }
-        --paper-card-header: {
-          background-color: #2C2D30;
-          background-image: url("http://www.fenghuang.org/templates/fenghuang/images/sheet.png");
-        }
+      .contain card-clab{
+        width: 300px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
       }
-      paper-card h3{
-        margin-top: 0;
+
+      /*.contain card-clab:hover{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        z-index: 10;
+      }*/
+
+      /*:host card-clab div.card figure h2 {
         color: #FD2626;
       }
+
+      card-clab figure{
+        background-color: #2C2D30 !important;
+        background-image: url("http://www.fenghuang.org/templates/fenghuang/images/sheet.png");
+      }*/
+
+      google-map{
+        height: 450px;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+      }
+
     </style>
     <template>
 
-      <paper-input label="[[_computeText(clubs)]]" on-keyup="_filterClubs"
-        value="{{serach::keyup}}"
-      ></paper-input>
+      <div class="contain">
+        <input-clab
+          label="[[_computeText(clubs)]]"
+          on-keyup="_filterClubs"
+          value="{{search::keyup}}"
+          placeholder="Milano, Pavia, ...">
+        </input-clab>
+      </div>
 
       <google-map api-key="[[key]]" latitude="[[latitude]]" longitude="[[longitude]]"
       fit-to-markers disable-zoom max-zoom="15" min-zoom="10" single-info-window>
@@ -49,25 +64,23 @@
           title="[[item.name]]" animation="DROP" on-google-map-marker-click="_test"
           click-events data-index$="[[index]]"
           ></google-map-marker>
-            <!-- <img style="display: block;" src="[[item.logo]]" alt="[[item.name]]"
-            width="200" height="200px">
-              <strong><a href="[[item.url]]" style="color: #FD2626" target="_blank">[[item.name]]</a></strong><br>
-              <small>[[item.city]]</small> -->
           </google-map-marker>
         </template>
       </google-map>
 
-      <template is="dom-repeat" items="[[list]]">
-        <paper-card image="[[item.logo]]">
-          <div class="card-content">
-            <h3>[[item.name]]</h3>
-            <p>[[item.city]]</p>
-          </div>
-          <div class="card-actions">
-            <paper-button data-index$="[[index]]" on-click="_goToUrl">Pagina del sito</paper-button>
-          </div>
-        </paper-card>
-      </template>
+      <div class="contain">
+        <template is="dom-repeat" items="[[list]]">
+          <card-clab
+            data-index$="[[index]]"
+            title="[[item.name]]"
+            primary="Pagina del sito"
+            secondary="Google Maps"
+            effect="saturation"
+            figure="[[item.logo]]">
+              <p>[[item.city]]</p>
+          </card-clab>
+        </template>
+      </div>
 
     </template>
 
@@ -176,11 +189,13 @@
 
         // Fires when the element was inserted into the document
         attached: function() {
-          this.list = this.clubs;
+          this.list = this.clubs.sort(this._byName);
         },
 
-        _test(evt){
-          console.log('ok');
+        _byName(a,b){
+          var textA = a.name.toUpperCase();
+          var textB = b.name.toUpperCase();
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         },
 
         _computeText(clubs){
@@ -190,6 +205,14 @@
         _goToUrl: function(evt){
           var i = parseInt(evt.currentTarget.dataset.index);
           window.location.href = this.list[i].url;
+        },
+
+        _computeLink(link){
+          var obj = {
+            href: link,
+            text: 'Apri nel sito'
+          };
+          return obj;
         },
 
         _filterClubs(evt){
