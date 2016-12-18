@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Tang Lang",
+    "city": "Pieve Emanuele (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Tang-Lan-Chuan.png",
+    "days": {
+      "tuesday": {
+        "latitude": 45.35068,
+        "longitude": 9.20059
+      },
+      "thursday": {
+        "latitude": 45.35068,
+        "longitude": 9.20059
+      }
+    },
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
+  },{
+    "name": "Yĩng Bũ Zhàng Chì",
+    "city": "Lacchiarella (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Yuin-Bu-Zhang-Chi.png",
+    "days": {
+      "wednesday": {
+        "latitude": 45.323792,
+        "longitude": 9.140073
+      },
+      "friday": {
+        "latitude": 45.323792,
+        "longitude": 9.140073
+      }
+    },
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-lacchiarella-milano"
+  },{
+    "name": "Mat Troi Dang Len",
+    "city": "Milano (Famagosta)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Mat-Troi-Dan-Len.png",
+    "latitude": 45.432146,
+    "longitude": 9.157363,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-milano-famagosta"
+  },{
+    "name": "Long Ho",
+    "city": "Landriano (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Long-Ho.png",
+    "latitude": 45.312194,
+    "longitude": 9.259746,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/kung-fu-landriano-pavia"
+  },{
+    "name": "Da Cam Thach",
+    "city": "Pero (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Da-Cam-Thach.png",
+    "latitude": 45.509823,
+    "longitude": 9.089452,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-pero"
+  },{
+    "name": "Pa Chi Chuan",
+    "city": "Zenone Al Lambro (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-club-placeholder.png",
+    "latitude": 45.326934,
+    "longitude": 9.357902,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-zenone-al-lambro"
+  },{
+    "name": "Nghich ma cuoc",
+    "city": "Torrevecchia Pia (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Nghich-ma-cuoc.png",
+    "latitude": 45.283727,
+    "longitude": 9.298005,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-torrevecchia-pia"
+  },{
+    "name": "Yun Chi",
+    "city": "Rozzano (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Yun-Chi-Rozzano.png",
+    "latitude": 45.378776,
+    "longitude": 9.154653,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-rozzano"
+  },{
+    "name": "Ho Trao",
+    "city": "San Giuliano Milanese (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Ho-Trao.png",
+    "latitude": 45.395334,
+    "longitude": 9.288501,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-san-giuliano-milanese"
+  },{
+    "name": "Shoen",
+    "city": "Senago (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Shoen.png",
+    "latitude": 45.574262,
+    "longitude": 9.118499,
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-senago"
+  }
+]
