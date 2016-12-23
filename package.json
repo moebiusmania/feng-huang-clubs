@@ -4,7 +4,7 @@
   "description": "",
   "main": "app/index.js",
   "scripts": {
-    "start": "npm bin http-server ./src -s",
+    "start": "http-server ./src -s",
     "deploy": ""
   },
   "repository": {

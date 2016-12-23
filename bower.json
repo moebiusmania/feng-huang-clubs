@@ -16,8 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "clab-ui-components": "^1.0.3",
-    "google-map": "GoogleWebComponents/google-map#^1.1.11",
-    "polymer": "^1.6.1"
+    "clab-ui-components": "^1.0.4",
+    "google-map": "GoogleWebComponents/google-map#^1.1.14",
+    "polymer": "^1.7.1",
+    "milligram": "^1.2.4"
   }
 }
