@@ -19,6 +19,7 @@
           placeholder="Milano, Pavia, ...">
         </div>
       </div>
+
       <div class="row">
         <div class="column">
           <google-map api-key="[[key]]" latitude="[[map.lat]]" longitude="[[map.long]]"
@@ -29,11 +30,27 @@
                 longitude="[[item.longitude]]"
                 title="[[item.name]]"
                 animation="DROP"
-                on-google-map-marker-click="select"
+                on-google-map-marker-click="_selectMarker"
                 click-events data-name$="[[item.name]]"
               ></google-map-marker>
             </template>
           </google-map>
+        </div>
+      </div>
+
+      <div class="row days">
+        <div class="column column-33">
+          <p>Giorni di allenamento:</p>
+        </div>
+        <div class="column">
+          <template is="dom-repeat" items="[[daysOpts]]">
+            <button
+              data-index$="[[index]]"
+              on-tap="_selectDays"
+              class$="[[_computeSelectedDay(item.selected)]]">
+                [[item.label]]
+            </button>
+          </template>
         </div>
       </div>
     </div>

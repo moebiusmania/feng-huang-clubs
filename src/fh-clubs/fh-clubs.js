@@ -17,9 +17,19 @@
             long: 9.1908025
           }
         },
+        daysOpts: {
+          type: Array,
+          value: [
+            {label: 'Lunedì'},
+            {label: 'Martedì'},
+            {label: 'Mercoledì'},
+            {label: 'Giovedì'},
+            {label: 'Venerdì'}
+          ]
+        },
         query: {
           type: String,
-          value: null
+          value: ''
         },
         data: {
           type: Array,
@@ -32,19 +42,51 @@
         markers: {
           type: Array,
           value: []
+        },
+        days: {
+          type: Array,
+          value: []
         }
       };
+    }
+
+    _computeSelectedDay(selected){
+      const classes = ['button', 'button-small', 'button-outline'];
+      return selected
+        ? classes.filter(elem => {return elem !== 'button-outline'}).join(' ')
+        : classes.join(' ');
     }
 
     _computeText(data){
       return `Cerca tra i ${data.length} club della scuola Feng Huang (per nome o paese)`;
     }
 
-    _updateQuery(evt){
-      this.query = evt.currentTarget.value;
+    _filter(){
+      this.filtered = this._search(this.data);
+      console.log(this.filtered);
+      console.log(this._getMarkers(this.filtered));
+      this.markers = this._getMarkers(this.filtered);
     }
 
-    _flatten(data){
+    _updateQuery(evt){
+      this.query = evt.currentTarget.value;
+      this._filter();
+    }
+
+    _search(data){
+      if(this.query.length){
+        const query = this.query.toLowerCase();
+        return data.filter((e,i) => {
+          const byName = e.name.toLowerCase().search(query) > -1;
+          const byCity = e.city.toLowerCase().search(query) > -1;
+          return byName || byCity;
+        });
+      } else {
+        return data;
+      }
+    }
+
+    _getMarkers(data){
       return data.map((e,i) => {
         e.days ? e.days.map((elem) => {
           elem.name = e.name
@@ -57,12 +99,23 @@
       }).filter((e,i) => {
         return e.days;
       }).reduce((a,b) => {
-        console.log(a,b);
-        return a.days.concat(b.days);
+        const concat = a.days ? a.days.concat(b.days) : a.concat(b.days)
+        return concat;
       });
     }
 
-    select(evt){
+    _selectDays(evt){
+      const index = parseInt(evt.currentTarget.dataset.index);
+      const selected = !this.daysOpts[index].selected;
+      this.daysOpts = [
+        ...this.daysOpts.slice(0,index),
+        Object.assign({}, this.daysOpts[index], {selected: selected}),
+        ...this.daysOpts.slice(index + 1)
+      ]
+      console.log(index,selected, this.daysOpts);
+    }
+
+    _selectMarker(evt){
       const name = evt.target.dataset.name;
       this.query = name;
     }
@@ -73,10 +126,8 @@
           return response.json();
         })
         .then(json => {
-          console.log(json);
           this.data = json.slice(0);
-          this.markers = this._flatten(json);
-          console.log(this._flatten(json));
+          this._filter();
         });
     }
   }
