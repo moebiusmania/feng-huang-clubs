@@ -121,7 +121,7 @@
     }
 
     attached(){
-      fetch('./../clubs.json')
+      fetch('../clubs.json')
         .then(response => {
           return response.json();
         })
