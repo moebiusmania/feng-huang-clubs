@@ -63,9 +63,10 @@
 
     _filter(){
       this.filtered = this._search(this.data);
-      console.log(this.filtered);
-      console.log(this._getMarkers(this.filtered));
+      // console.log(this.filtered);
+      // console.log(this._getMarkers(this.filtered));
       this.markers = this._getMarkers(this.filtered);
+      console.log(this.markers);
     }
 
     _updateQuery(evt){
@@ -87,7 +88,8 @@
     }
 
     _getMarkers(data){
-      return data.map((e,i) => {
+      console.log('# data', data);
+      const filtered = data.map((e,i) => {
         e.days ? e.days.map((elem) => {
           elem.name = e.name
           return elem;
@@ -98,10 +100,15 @@
         };
       }).filter((e,i) => {
         return e.days;
-      }).reduce((a,b) => {
-        const concat = a.days ? a.days.concat(b.days) : a.concat(b.days)
-        return concat;
       });
+      if(data.length > 1){
+        return filtered.reduce((a,b) => {
+          const concat = a.days ? a.days.concat(b.days) : a.concat(b.days);
+          return concat;
+        });
+      } else {
+        return filtered[0].days;
+      }
     }
 
     _selectDays(evt){
@@ -111,13 +118,14 @@
         ...this.daysOpts.slice(0,index),
         Object.assign({}, this.daysOpts[index], {selected: selected}),
         ...this.daysOpts.slice(index + 1)
-      ]
+      ];
       console.log(index,selected, this.daysOpts);
     }
 
     _selectMarker(evt){
       const name = evt.target.dataset.name;
       this.query = name;
+      this._filter();
     }
 
     attached(){
