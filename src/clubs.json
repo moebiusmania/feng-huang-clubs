@@ -40,6 +40,12 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-milano-famagosta",
     "days": [
       {
+        "day": 0,
+        "latitude": 45.432146,
+        "longitude": 9.157363
+      },
+      {
+        "day": 2,
         "latitude": 45.432146,
         "longitude": 9.157363
       }
@@ -51,6 +57,12 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/kung-fu-landriano-pavia",
     "days": [
       {
+        "day": 0,
+        "latitude": 45.312194,
+        "longitude": 9.259746
+      },
+      {
+        "day": 3,
         "latitude": 45.312194,
         "longitude": 9.259746
       }
@@ -62,17 +74,29 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-pero",
     "days": [
       {
-        "latitude": 45.509823,
-        "longitude": 9.089452
+        "day": 1,
+        "latitude": 45.509753,
+        "longitude": 9.089593
+      },
+      {
+        "day": 3,
+        "latitude": 45.509753,
+        "longitude": 9.089593
       }
     ]
   },{
     "name": "Pa Chi Chuan",
     "city": "Zenone Al Lambro (Milano)" ,
-    "logo": "http://www.fenghuang.org/images/loghi-club/logo-club-placeholder.png",
+    "logo": "http://www.fenghuang.org/images/loghi-club/PACHICHUAN_Logo.png",
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-zenone-al-lambro",
     "days": [
       {
+        "day": 1,
+        "latitude": 45.326934,
+        "longitude": 9.357902
+      },
+      {
+        "day": 4,
         "latitude": 45.326934,
         "longitude": 9.357902
       }
@@ -84,6 +108,12 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-torrevecchia-pia",
     "days": [
       {
+        "day": 2,
+        "latitude": 45.283727,
+        "longitude": 9.298005
+      },
+      {
+        "day": 4,
         "latitude": 45.283727,
         "longitude": 9.298005
       }
@@ -95,6 +125,12 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-rozzano",
     "days": [
       {
+        "day": 0,
+        "latitude": 45.378776,
+        "longitude": 9.154653
+      },
+      {
+        "day": 2,
         "latitude": 45.378776,
         "longitude": 9.154653
       }
@@ -106,6 +142,12 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-san-giuliano-milanese",
     "days": [
       {
+        "day": 0,
+        "latitude": 45.395334,
+        "longitude": 9.288501
+      },
+      {
+        "day": 3,
         "latitude": 45.395334,
         "longitude": 9.288501
       }
@@ -117,9 +159,50 @@
     "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-senago",
     "days": [
       {
+        "day": 0,
+        "latitude": 45.574262,
+        "longitude": 9.118499
+      },
+      {
+        "day": 3,
         "latitude": 45.574262,
         "longitude": 9.118499
       }
     ]
+  },{
+    "name": "Dai Long Trao",
+    "city": "Corsico (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Dai-Long-Trao-Corsico.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-corsico",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.441871,
+        "longitude": 9.111886
+      },
+      {
+        "day": 3,
+        "latitude": 45.441871,
+        "longitude": 9.111886
+      }
+    ]
+  },{
+    "name": "Qian Gong",
+    "city": "Ceranova (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Qian-Gong.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-ceranova-pavia",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.257298,
+        "longitude": 9.237621
+      },
+      {
+        "day": 3,
+        "latitude": 45.257298,
+        "longitude": 9.237621
+      }
+    ]
   }
+
 ]

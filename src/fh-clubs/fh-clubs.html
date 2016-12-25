@@ -1,9 +1,6 @@
 <!-- Imports polymer -->
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/google-map/google-map.html">
-<link rel="import" href="../bower_components/clab-ui-components/input/view.html">
-<link rel="import" href="../bower_components/clab-ui-components/card/view.html">
-
 
 <!-- Defines element markup -->
 <dom-module id="feng-huang-clubs">
@@ -52,6 +49,37 @@
             </button>
           </template>
         </div>
+      </div>
+
+
+      <div class="row row-wrap cards">
+        <template is="dom-repeat" items="[[filtered]]">
+        <div class="column column-25">
+          <article class="card">
+            <header class="card__thumb">
+              <img src="[[item.logo]]">
+            </header>
+            <!-- <div class="card__date">
+              <span class="card__date__day">12</span>
+              <span class="card__date__month">Mai</span>
+            </div> -->
+            <div class="card__body">
+              <!-- <div class="card__category">
+                <a href="#">Engineering</a>
+              </div> -->
+              <h2 class="card__title">
+                <a href="[[item.url]]" target="_blank">[[item.name]]</a>
+              </h2>
+              <p><small>[[item.city]]</small></p>
+              <!--<div class="card__subtitle">A Head In The Polls </div>
+               <p class="card__description">
+                 With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+              </p> -->
+              <p></p>
+            </div>
+          </article>
+        </div>
+        </template>
       </div>
     </div>
 
