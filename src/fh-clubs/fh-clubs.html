@@ -1,0 +1,88 @@
+<!-- Imports polymer -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
+
+<!-- Defines element markup -->
+<dom-module id="feng-huang-clubs">
+  <template>
+    <link rel="stylesheet" href="fh-clubs.css">
+
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <label for="query">[[_computeText(data)]]</label>
+          <input type="text" name="query" value="[[query]]"
+          on-keyup="_updateQuery"
+          placeholder="Milano, Pavia, ...">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <google-map api-key="[[key]]" latitude="[[map.lat]]" longitude="[[map.long]]"
+          fit-to-markers disable-zoom max-zoom="16" min-zoom="10" single-info-window>
+            <template is="dom-repeat" items="[[markers]]">
+              <google-map-marker
+                latitude="[[item.latitude]]"
+                longitude="[[item.longitude]]"
+                title="[[item.name]]"
+                animation="DROP"
+                on-google-map-marker-click="_selectMarker"
+                click-events data-name$="[[item.name]]"
+              ></google-map-marker>
+            </template>
+          </google-map>
+        </div>
+      </div>
+
+      <div class="row days">
+        <div class="column column-33">
+          <p>Giorni di allenamento:</p>
+        </div>
+        <div class="column">
+          <template is="dom-repeat" items="[[daysOpts]]">
+            <button
+              data-index$="[[index]]"
+              on-tap="_selectDays"
+              class$="[[_computeSelectedDay(item.selected)]]">
+                [[item.label]]
+            </button>
+          </template>
+        </div>
+      </div>
+
+
+      <div class="row row-wrap cards">
+        <template is="dom-repeat" items="[[filtered]]">
+        <div class="column column-25">
+          <article class="card">
+            <header class="card__thumb">
+              <img src="[[item.logo]]">
+            </header>
+            <!-- <div class="card__date">
+              <span class="card__date__day">12</span>
+              <span class="card__date__month">Mai</span>
+            </div> -->
+            <div class="card__body">
+              <!-- <div class="card__category">
+                <a href="#">Engineering</a>
+              </div> -->
+              <h2 class="card__title">
+                <a href="[[item.url]]" target="_blank">[[item.name]]</a>
+              </h2>
+              <p><small>[[item.city]]</small></p>
+              <!--<div class="card__subtitle">A Head In The Polls </div>
+               <p class="card__description">
+                 With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+              </p> -->
+              <p></p>
+            </div>
+          </article>
+        </div>
+        </template>
+      </div>
+    </div>
+
+  </template>
+  <script src="fh-clubs.js"></script>
+</dom-module>
