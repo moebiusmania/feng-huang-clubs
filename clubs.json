@@ -85,6 +85,23 @@
       }
     ]
   },{
+    "name": "Da Cam Thach",
+    "city": "Pessano con Bornago (Milano) " ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Da-Cam-Thach.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-pero",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.551348,
+        "longitude": 9.386223
+      },
+      {
+        "day": 2,
+        "latitude": 45.545882,
+        "longitude": 9.389233
+      }
+    ]
+  },{
     "name": "Pa Chi Chuan",
     "city": "Zenone Al Lambro (Milano)" ,
     "logo": "http://www.fenghuang.org/images/loghi-club/PACHICHUAN_Logo.png",
@@ -203,6 +220,90 @@
         "longitude": 9.237621
       }
     ]
+  },{
+    "name": "Shì Hòu",
+    "city": "Vidigulfo (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Shi-Hou.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-vidigulfo-pavia",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.2931523,
+        "longitude": 9.2355102
+      },
+      {
+        "day": 3,
+        "latitude": 45.2931523,
+        "longitude": 9.2355102
+      }
+    ]
+  },{
+    "name": "Bac Ho",
+    "city": "Marcignago (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Bac-Ho_Tosoni.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-marcignago-pavia",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.25845,
+        "longitude": 9.075061
+      },
+      {
+        "day": 2,
+        "latitude": 45.25845,
+        "longitude": 9.075061
+      }
+    ]
+  },{
+    "name": "Xuan Long",
+    "city": "Buccinasco/Assago (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Xuang-Long.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-buccinasco-milano",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.403395,
+        "longitude": 9.136541
+      },
+      {
+        "day": 3,
+        "latitude": 45.403395,
+        "longitude": 9.136541
+      }
+    ]
+  },{
+    "name": "Pan Jua Shi",
+    "city": "Gorla Minore (Varese)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Xuang-Long.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-gorla-minore-va",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.70708,
+        "longitude": 8.877291
+      },
+      {
+        "day": 2,
+        "latitude": 45.70708,
+        "longitude": 8.877291
+      }
+    ]
+  },{
+    "name": "Sho Ying",
+    "city": "Cesano Boscone (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Sho-Ying.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-cesano-boscone",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.445651,
+        "longitude": 9.090596
+      },
+      {
+        "day": 3,
+        "latitude": 45.445651,
+        "longitude": 9.090596
+      }
+    ]
   }
-
 ]

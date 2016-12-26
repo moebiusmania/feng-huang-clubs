@@ -63,10 +63,7 @@
 
     _filter(){
       this.filtered = this._search(this.data);
-      // console.log(this.filtered);
-      // console.log(this._getMarkers(this.filtered));
       this.markers = this._getMarkers(this.filtered);
-      console.log(this.markers);
     }
 
     _updateQuery(evt){
@@ -88,7 +85,6 @@
     }
 
     _getMarkers(data){
-      console.log('# data', data);
       const filtered = data.map((e,i) => {
         e.days ? e.days.map((elem) => {
           elem.name = e.name
@@ -107,7 +103,7 @@
           return concat;
         });
       } else {
-        return filtered[0].days;
+        return filtered[0] ? filtered[0].days : filtered;
       }
     }
 
