@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FD2626">
+  <link rel="shortcut icon" href="http://www.fenghuang.org/templates/fenghuang/favicon.ico">
+  <title>Feng Huang Clubs</title>
+
+  <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/master/webcomponents-loader.js"></script>
+  <script>
+    window.addEventListener('WebComponentsReady', function(){
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = "./app.js";
+      document.body.appendChild(script);
+    });
+  </script>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h2>Feng Huang club locator</h2>
+      </div>
+    </div>
+  </div>
+
+  <fh-clubs></fh-clubs>
+
+</body>
+</html>
