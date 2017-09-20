@@ -1,5 +1,7 @@
 'use strict';
 
+import DATA from './../clubs.json';
+
 export default {
   key: {
     type: String,
@@ -28,7 +30,7 @@ export default {
   },
   data: {
     type: Array,
-    value: []
+    value: DATA || []
   },
   filtered: {
     type: Array,

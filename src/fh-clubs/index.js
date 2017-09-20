@@ -1,9 +1,9 @@
 'use strict';
 
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
-import template from './view.html';
+import template from './template.html';
 import props from './props';
-
+import '@polymer/polymer/lib/elements/dom-repeat';
 
 class FengHuangClubs extends PolymerElement {
   
@@ -87,15 +87,7 @@ class FengHuangClubs extends PolymerElement {
 
   connectedCallback(){
     super.connectedCallback();
-
-    fetch('./clubs.json')
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        this.data = json.slice(0);
-        this._filter();
-      });
+    this._filter();
   }
 }
 
