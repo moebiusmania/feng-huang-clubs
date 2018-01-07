@@ -1,0 +1,309 @@
+[
+  {
+    "name": "Tang Lang",
+    "city": "Pieve Emanuele (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Tang-Lan-Chuan.png",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.35068,
+        "longitude": 9.20059
+      },
+      {
+        "day": 3,
+        "latitude": 45.35068,
+        "longitude": 9.20059
+      }
+    ],
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/pieve-emanuele-milano-sud"
+  },{
+    "name": "Yĩng Bũ Zhàng Chì",
+    "city": "Lacchiarella (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Yuin-Bu-Zhang-Chi.png",
+    "days": [
+      {
+        "day": 2,
+        "latitude": 45.323792,
+        "longitude": 9.140073
+      },
+      {
+        "day": 4,
+        "latitude": 45.31967,
+        "longitude": 9.138918
+      }
+    ],
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-lacchiarella-milano"
+  },{
+    "name": "Mat Troi Dang Len",
+    "city": "Milano (Famagosta)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Mat-Troi-Dan-Len.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-milano-famagosta",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.432146,
+        "longitude": 9.157363
+      },
+      {
+        "day": 2,
+        "latitude": 45.432146,
+        "longitude": 9.157363
+      }
+    ]
+  },{
+    "name": "Long Ho",
+    "city": "Landriano (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Long-Ho.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/kung-fu-landriano-pavia",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.312194,
+        "longitude": 9.259746
+      },
+      {
+        "day": 3,
+        "latitude": 45.312194,
+        "longitude": 9.259746
+      }
+    ]
+  },{
+    "name": "Da Cam Thach",
+    "city": "Pero (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Da-Cam-Thach.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-pero",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.509753,
+        "longitude": 9.089593
+      },
+      {
+        "day": 3,
+        "latitude": 45.509753,
+        "longitude": 9.089593
+      }
+    ]
+  },{
+    "name": "Da Cam Thach",
+    "city": "Pessano con Bornago (Milano) " ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Da-Cam-Thach.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-pero",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.551348,
+        "longitude": 9.386223
+      },
+      {
+        "day": 2,
+        "latitude": 45.545882,
+        "longitude": 9.389233
+      }
+    ]
+  },{
+    "name": "Pa Chi Chuan",
+    "city": "Zenone Al Lambro (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/PACHICHUAN_Logo.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-zenone-al-lambro",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.326934,
+        "longitude": 9.357902
+      },
+      {
+        "day": 4,
+        "latitude": 45.326934,
+        "longitude": 9.357902
+      }
+    ]
+  },{
+    "name": "Nghich ma cuoc",
+    "city": "Torrevecchia Pia (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Nghich-ma-cuoc.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-torrevecchia-pia",
+    "days": [
+      {
+        "day": 2,
+        "latitude": 45.283727,
+        "longitude": 9.298005
+      },
+      {
+        "day": 4,
+        "latitude": 45.283727,
+        "longitude": 9.298005
+      }
+    ]
+  },{
+    "name": "Yun Chi",
+    "city": "Rozzano (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Yun-Chi-Rozzano.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-rozzano",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.378776,
+        "longitude": 9.154653
+      },
+      {
+        "day": 2,
+        "latitude": 45.378776,
+        "longitude": 9.154653
+      }
+    ]
+  },{
+    "name": "Ho Trao",
+    "city": "San Giuliano Milanese (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Ho-Trao.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-san-giuliano-milanese",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.395334,
+        "longitude": 9.288501
+      },
+      {
+        "day": 3,
+        "latitude": 45.395334,
+        "longitude": 9.288501
+      }
+    ]
+  },{
+    "name": "Shoen",
+    "city": "Senago (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Shoen.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-senago",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.574262,
+        "longitude": 9.118499
+      },
+      {
+        "day": 3,
+        "latitude": 45.574262,
+        "longitude": 9.118499
+      }
+    ]
+  },{
+    "name": "Dai Long Trao",
+    "city": "Corsico (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Dai-Long-Trao-Corsico.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-corsico",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.441871,
+        "longitude": 9.111886
+      },
+      {
+        "day": 3,
+        "latitude": 45.441871,
+        "longitude": 9.111886
+      }
+    ]
+  },{
+    "name": "Qian Gong",
+    "city": "Ceranova (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Qian-Gong.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/corso-ceranova-pavia",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.257298,
+        "longitude": 9.237621
+      },
+      {
+        "day": 3,
+        "latitude": 45.257298,
+        "longitude": 9.237621
+      }
+    ]
+  },{
+    "name": "Shì Hòu",
+    "city": "Vidigulfo (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Shi-Hou.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-vidigulfo-pavia",
+    "days": [
+      {
+        "day": 1,
+        "latitude": 45.2931523,
+        "longitude": 9.2355102
+      },
+      {
+        "day": 3,
+        "latitude": 45.2931523,
+        "longitude": 9.2355102
+      }
+    ]
+  },{
+    "name": "Bac Ho",
+    "city": "Marcignago (Pavia)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Bac-Ho_Tosoni.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-marcignago-pavia",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.25845,
+        "longitude": 9.075061
+      },
+      {
+        "day": 2,
+        "latitude": 45.25845,
+        "longitude": 9.075061
+      }
+    ]
+  },{
+    "name": "Xuan Long",
+    "city": "Buccinasco/Assago (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Xuang-Long.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-buccinasco-milano",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.403395,
+        "longitude": 9.136541
+      },
+      {
+        "day": 3,
+        "latitude": 45.403395,
+        "longitude": 9.136541
+      }
+    ]
+  },{
+    "name": "Pan Jua Shi",
+    "city": "Gorla Minore (Varese)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/Xuang-Long.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-gorla-minore-va",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.70708,
+        "longitude": 8.877291
+      },
+      {
+        "day": 2,
+        "latitude": 45.70708,
+        "longitude": 8.877291
+      }
+    ]
+  },{
+    "name": "Sho Ying",
+    "city": "Cesano Boscone (Milano)" ,
+    "logo": "http://www.fenghuang.org/images/loghi-club/logo-Sho-Ying.png",
+    "url": "http://www.fenghuang.org/kung-fu-milano-pavia/palestra-cesano-boscone",
+    "days": [
+      {
+        "day": 0,
+        "latitude": 45.445651,
+        "longitude": 9.090596
+      },
+      {
+        "day": 3,
+        "latitude": 45.445651,
+        "longitude": 9.090596
+      }
+    ]
+  }
+]
